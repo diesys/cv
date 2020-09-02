@@ -15,7 +15,7 @@ html {
     display: flex;
     min-height: 100vh;
     width: 100%;
-    padding-bottom: 4em;
+    padding-bottom: 3em;
 }
 
 .no-list {
@@ -41,21 +41,70 @@ ul.flex li {
     align-items: center;
 }
 
+header {
+    display: flex;
+    /* position: sticky; */
+    position: fixed;
+    top: 0;
+    align-items: center;
+    width: 100vw;
+    background: linear-gradient(#eeef 20%,#fff0);
+}
+header > * {
+    padding: 1em 3em;
+    align-self: center;
+    text-shadow: -1px -1px 2px #fff;
+    /* height: 100%; */
+}
+header > .left-side {
+    padding: 0 !important;
+    flex: 2 !important;
+}
+header > .left-side h1 {
+    margin-top: 0em;
+    margin-left: 2.5em;
+    text-align: center;
+}
+header .right-side {
+    padding: 2em 0;
+    flex: 2;
+}
+header .right-side,
+header .right-side a {
+    color: #000;
+}   
+#profilepic {
+    /* position: absolute; */
+    /* float: left; */
+    /* right: 100%; */
+    /* transform: translate(30%, 0%); */
+    transform: translate(-2em, 0%);
+    position: relative;
+    /* top: 2em; */
+    box-shadow: 5px 10px 50px #0007;
+    border: 1px solid #fff2;
+    border-radius: 100%;
+    flex: 1;
+    /* height: 120px;
+    width: 120px; */
+}
+
 footer {
-    height: 4em;
-    background-color: #333;
-    background: linear-gradient(#fff0, #cccf 70%);
+    /* padding-top: 1em; */
     /* background: linear-gradient(#63668b00, #414472f0 70%); */
     /* text-shadow: 0 1px 3px #000a; */
+    height: 3em;
+    background-color: #fffc;
+    /* background: linear-gradient(#fff0, #cccf 70%); */
     display: flex;
     align-items: center;
     justify-content: space-around;
+    position: fixed;
     font-weight: 700;
     z-index: 300;
-    position: fixed;
     bottom: 0;
-    padding-top: 2em;
     width: 100vw;
+    box-shadow: 0 5px 20px -10px inset #000a;
 }
 footer a, footer {
     color: #222 !important;
@@ -65,23 +114,30 @@ footer span {
     width: 25%;
 }
 
-#left-side {
-    padding: 0 2em 2em 2em;
+#left-side, .left-side {
+    padding: 2em;
     flex: 3;
+}
+#left-side {
+    padding: 10em 2em 2em 2em;
     background: #fff;
+}
+#left-side #positions {
+    width: 100%;
+    height: min-content;
 }
 
 #right-side {
-    padding: 4em 1.5em 2em 1.5em;
-    background: url('side.png') bottom center;
-    background-size: cover;
-    box-shadow: 5px 0 40px -5px #0007 inset;
-    color: #fff;
-    /* min-width: 200px; */
     flex: 1;
-    font-size: .85em;
+    color: #fff !important;
     text-shadow: 1px 2px 6px #0006;
-    /* border-radius: 0 0 0 4em; */
+    font-size: .85em;
+    /* padding: 0em 1.5em 2em 1.5em; */
+    padding: 10em 1.5em 30em 1.5em;
+    background-size: cover;
+    background: url('side.png') bottom center;
+    box-shadow: 5px 0 40px -5px #0007 inset;
+    max-width: 255px;
 }
 
 #right-side a,
@@ -93,18 +149,6 @@ footer span {
     font-weight: 400;
 }
 
-#profilepic {
-    /* position: absolute; */
-    position: relative;
-    /* float: left; */
-    right: 100%;
-    top: 0;
-    transform: translate(30%, 0%);
-    box-shadow: 5px 10px 50px #0007;
-    border: 1px solid #fff2;
-    border-radius: 100%;
-}
-
 .container {
     padding: 2em 1em;
 }
@@ -113,9 +157,9 @@ footer span {
     min-width: 200px;
     flex: 1;
 }
-#header {
+/* #header {
     width: 85% !important;
-}
+} */
 #left-side h1, #left-side h2, #left-side h3 {
     text-align: center !important;
 }
@@ -188,7 +232,7 @@ ul.jobs li span.icon {
     position: fixed;
     margin: auto auto;
     transition: all 1s;
-    bottom: 4em;
+    bottom: 3em;
     left: 0;
     width: 100vw;
     height: calc(100vh - 3em);
@@ -199,24 +243,38 @@ ul.jobs li span.icon {
 }
 
 
-@media screen and (max-width: 660px) {
-    #left-side {
-        padding: 0 .5em 2em .5em;
-        flex: 1;
-    }
+@media screen and (min-width: 1300px) {
     #left-side .container:not(#header) {
-        padding: 1em 2em;
+        min-width: 26%;
     }
+}
+@media screen and (max-width: 660px) {
     #overview {
         flex-wrap: wrap;
-    }
-    #profilepic {
-        right: 3em;
     }
     #right-side {
         flex: 1;
         padding-bottom: 50vh;
         font-size: .95rem;
         /* border-radius: 0; */
+    }
+    #profilepic {
+        height: 100px;
+        width: 100px;
+    }
+    header>.left-side h1 {
+        margin: 0 1.5em;
+        font-size: 1.5rem;
+    }
+    header .right-side {
+        font-size: .9rem;
+        transform: translateY(-10%);
+    }
+    header>.left-side h1 {
+        transform: translateY(-50%);
+    }
+    header>* {
+        /* flex: 0 !important; */
+        padding: 1em;
     }
 }

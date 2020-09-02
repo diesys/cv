@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diego Turtulici's CV</title>
-    <link rel="stylesheet" href="src/cv.min.css">
+    <!-- <link rel="stylesheet" href="src/cv.min.css"> -->
+    <link rel="stylesheet" href="src/cv.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,400;1,700&display=swap"
         rel="stylesheet">
@@ -31,9 +32,33 @@
 </head>
 
 <body>
+    <header id="header">
+        <div class="flex center left-side">
+            <h1><b>Diego</b> Turtulici</h1>
+        </div>
+
+        <div class="flex center">
+
+            <span>
+                <img id="profilepic" src="src/pic.jpg" width="120" alt="">
+            </span>
+            
+            <!-- <div class="txt-right right-side"> -->
+                <!-- <img id="profilepic" src="src/pic.jpg" width="120" alt=""> -->
+            <div class="right-side txt-right">
+                <ul class="no-list">
+                    <li><b><a href="https://flowin.space">flowin.space</a></b></li>
+                    <li><a href="mailto:info@flowin.space">info@flowin.space</a></li>
+                    <!-- <li>(+39) <a href="tel:+393336554165">333 655 41 65</a></li> -->
+                    <li>Pisa, Italia</li>
+                </ul>
+            </div>
+        </div>
+        <!-- </div> -->
+    </header>
     <section id="overview">
         <div id="left-side" class="flex center">
-            <div id="header" class="container txt-center">
+            <!-- <div id="header" class="container txt-center">
                 <h1><b>Diego</b> Turtulici</h1>
                 <ul class="no-list flex center">
                     <li><span class="icon webdev"></span> Web Developer</li>
@@ -41,7 +66,13 @@
                     <li><span class="icon ux"></span> UX/UI Designer</li>
                     <li><span class="icon photo"></span> Photographer</li>
                 </ul>
-            </div>
+            </div> -->
+             <ul class="no-list flex center" id="positions">
+                 <li><span class="icon webdev"></span> Web Developer</li>
+                 <li><span class="icon graphics"></span> Graphic Designer</li>
+                 <li><span class="icon ux"></span> UX/UI Designer</li>
+                 <li><span class="icon photo"></span> Photographer</li>
+             </ul>
             
             <div class="container txt-justify">
                 <h3>ABOUT ME</h3>
@@ -90,7 +121,7 @@
                             <span class="icon graphics"></span>
                         </li>
                         <li>
-                            Tech.is.it (Riccardo Palombo) 
+                            Tech.is.it (R.P.) 
                             <span class="icon graphics"></span>
                         </li>
                         <li>
@@ -239,7 +270,7 @@
         </div>
         
         <div id="right-side" class="txt-right">
-            <img id="profilepic" src="src/pic.jpg" width="120" alt="">
+            <!-- <img id="profilepic" src="src/pic.jpg" width="120" alt="">
             <div class="container">
                 <ul class="no-list">
                     <li><b><a href="https://flowin.space">flowin.space</a></b></li>
@@ -247,7 +278,7 @@
                     <li>(+39) <a href="tel:+393336554165">333 655 41 65</a></li>
                     <li>Pisa, Italia</li>
                 </ul>
-            </div>
+            </div> -->
 
             <div class="container">
                 <h3>LANGUAGE SKILLS</h3>
@@ -311,12 +342,6 @@
                         Social networks <br>
                         <small>Other</small>
                     </li>
-
-                    
-                    
-                    
-                    
-                    
                 </ul>
             </div>
                 
@@ -324,7 +349,7 @@
     </section>
 
     <footer class="txt-center separator">
-        <span id="readmore">READ MORE</span>
+        <span id="readmore">MORE</span>
         <span class="flex space-around">
             <a class="txt-no-decor txt-small" href="DiegoTurtulici_CV_small.pdf" download><span class="icon download small"></span> Small</a>
             <a class="txt-no-decor txt-small" href="DiegoTurtulici_CV_full.pdf" download><span class="icon download small"></span> Full</a>
