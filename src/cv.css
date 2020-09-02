@@ -173,6 +173,7 @@ h1 {
 .txt-justify {text-align: justify;}
 .txt-no-decor {text-decoration: none !important;}
 .txt-small {font-size: .8rem;}
+.txt-default {color: #111;}
 
 span.icon {
     width: 1.2em;
