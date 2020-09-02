@@ -43,18 +43,17 @@ ul.flex li {
 
 header {
     display: flex;
-    /* position: sticky; */
     position: fixed;
     top: 0;
     align-items: center;
     width: 100vw;
     background: linear-gradient(#eeef 20%,#fff0);
+    z-index: 100;
 }
 header > * {
     padding: 1em 3em;
     align-self: center;
     text-shadow: -1px -1px 2px #fff;
-    /* height: 100%; */
 }
 header > .left-side {
     padding: 0 !important;
@@ -74,28 +73,17 @@ header .right-side a {
     color: #000;
 }   
 #profilepic {
-    /* position: absolute; */
-    /* float: left; */
-    /* right: 100%; */
-    /* transform: translate(30%, 0%); */
-    transform: translate(-2em, 0%);
+    transform: translate(-1.2em, 0%);
     position: relative;
-    /* top: 2em; */
     box-shadow: 5px 10px 50px #0007;
-    border: 1px solid #fff2;
+    border: 1px solid #eee5;
     border-radius: 100%;
     flex: 1;
-    /* height: 120px;
-    width: 120px; */
 }
 
 footer {
-    /* padding-top: 1em; */
-    /* background: linear-gradient(#63668b00, #414472f0 70%); */
-    /* text-shadow: 0 1px 3px #000a; */
     height: 3em;
     background-color: #fffc;
-    /* background: linear-gradient(#fff0, #cccf 70%); */
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -108,7 +96,6 @@ footer {
 }
 footer a, footer {
     color: #222 !important;
-    /* color: #ffffff !important; */
 }
 footer span {
     width: 25%;
@@ -157,9 +144,6 @@ footer span {
     min-width: 200px;
     flex: 1;
 }
-/* #header {
-    width: 85% !important;
-} */
 #left-side h1, #left-side h2, #left-side h3 {
     text-align: center !important;
 }
@@ -228,7 +212,7 @@ ul.jobs li span.icon {
     pointer-events: none;
 }
 #full-iframe {
-    z-index: 10;
+    z-index: 200;
     position: fixed;
     margin: auto auto;
     transition: all 1s;
@@ -246,21 +230,12 @@ ul.jobs li span.icon {
 @media screen and (min-width: 1300px) {
     #left-side .container:not(#header) {
         min-width: 26%;
+        padding: 3%;
     }
 }
 @media screen and (max-width: 660px) {
-    #overview {
-        flex-wrap: wrap;
-    }
-    #right-side {
-        flex: 1;
-        padding-bottom: 50vh;
-        font-size: .95rem;
-        /* border-radius: 0; */
-    }
-    #profilepic {
-        height: 100px;
-        width: 100px;
+    header {
+        align-items: center;
     }
     header>.left-side h1 {
         margin: 0 1.5em;
@@ -269,12 +244,59 @@ ul.jobs li span.icon {
     header .right-side {
         font-size: .9rem;
         transform: translateY(-10%);
+        flex: 0;
     }
     header>.left-side h1 {
-        transform: translateY(-50%);
+        transform: translateY(-25%);
+        margin: 1em;
+        text-align: left;
     }
     header>* {
-        /* flex: 0 !important; */
-        padding: 1em;
+        padding: 1.5em;
+        width: 100vw;
+    }
+    header> .flex:last-child {
+        justify-content: flex-end;
+    }
+    #overview {
+        flex-wrap: wrap;
+    }
+    #right-side {
+        flex: 1;
+        padding: 2em 1.5em 80vh 1.5em;
+        font-size: .95rem;
+        max-width: 100%;
+    }
+    #profilepic {
+        height: 100px;
+        width: 100px;
+    }
+}
+@media screen and (max-width: 480px) {
+    header {
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    header> .flex:last-child {
+        height: min-content;
+        transform: translateY(-30%);
+        justify-content: center;
+    }
+    header .right-side {
+        text-align: left;
+    }
+    header>.left-side h1 {
+        width: 60vw;
+        transform: translateY(-10%);
+        text-align: center;
+    }
+    #left-side {
+        padding: 12em 1em 1em 1em;
+    }
+    #profilepic {
+        margin-top: .5em;
+        height: 80px;
+        width: 80px;
     }
 }
