@@ -31,13 +31,16 @@ html {
     /* align-items: center; */
     justify-content: center;
 }
+.flex.space-around {
+    justify-content: space-around;
+}
 ul.flex li {
     margin: .2em .5em;
     display: flex;
     align-items: center;
 }
 
-.separator {
+footer {
     height: 4em;
     background: #333;
     display: flex;
@@ -49,6 +52,9 @@ ul.flex li {
     position: fixed;
     bottom: 0;
     width: 100vw;
+}
+footer span {
+    width: 25%;
 }
 
 #left-side {
