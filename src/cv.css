@@ -14,6 +14,7 @@ html {
     display: flex;
     min-height: 100vh;
     width: 100%;
+    padding-bottom: 4em;
 }
 
 .no-list {
@@ -26,7 +27,6 @@ html {
     flex-wrap: wrap;
 }
 
-WORK EXPERIENCE Freelance Herberal Comagri Tech.is.it (Riccardo Palombo) Dsign IterTour 1010 (1 Object 1 Owner) Colnago Bikes Terzarossa Bikes Elav Beers Gancia Wines FlyFish (sportswear) Il Prato (publisher) Libersoft
 .flex.center {
     /* align-items: center; */
     justify-content: center;
@@ -38,13 +38,17 @@ ul.flex li {
 }
 
 .separator {
-    height: 7em;
+    height: 4em;
     background: #333;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     color: #eee;
     font-weight: 700;
+    z-index: 300;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
 }
 
 .container {
@@ -99,7 +103,8 @@ h1 {
     font-size: .85em;
 }
 
-#right-side a {
+#right-side a,
+.separator a {
     color: #fff;
 }
 #right-side h4 {
@@ -127,6 +132,7 @@ span.icon.webdev {background: url('code-slash.png');}
 span.icon.graphics {background: url('color-palette.png');}
 span.icon.ux {background: url('color-wand.png');}
 span.icon.photo {background: url('camera.png');}
+span.icon.download {background: url('download.png');}
 
 
 ul.jobs li {
@@ -140,40 +146,22 @@ ul.jobs li span.icon {
     margin-left: 8px;
 }
 
-#full #full-iframe.hidden {
+#full-iframe.hidden {
     height: 0vh;
     /* box-shadow: 0 5px 30px 10px #0000; */
     pointer-events: none;
 }
-#full #full-iframe {
+#full-iframe {
+    z-index: 10;
     position: fixed;
     margin: auto auto;
     transition: all 1s;
-    top: 0;
+    bottom: 3em;
     left: 0;
     width: 100vw;
-    height: 100vh;
-    /* transform: translate(-50%, -50%); */
-    /* top: calc(50% - 3em);
-    left: 50%; */
-    /* width: calc(100vw - 8em);
-    height: calc(100vh - 8em); */
-    /* border-radius: 15px; */
-    /* box-shadow: 0 5px 30px 4px #0008; */
+    height: calc(100vh - 3em);
+    box-shadow: 0 0px 10px #0008;
 }
-#close.hidden {
-    display: none;
-}
-#close {
-    display: block;
-    z-index: 100;
-    position: fixed;
-    top: 0;
-    font-weight: 600;
-    padding: 1em;
-    color: #eee;
-    background: #444;
-    border-radius: 0 0 0 10px;
-    right: 0;
+#readmore {
     cursor: pointer;
 }

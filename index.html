@@ -304,22 +304,30 @@
         </div>
     </section>
 
-    <a href="#full" class="txt-no-decor txt-center separator" id="readmore">READ MORE</a>
+    <footer class="txt-center separator">
+        <span id="readmore">READ MORE</span>
+        <a class="txt-no-decor" href="DiegoTurtulici_CV_small.pdf" download><span class="icon download"></span> CV (small)</a>
+        <a class="txt-no-decor" href="DiegoTurtulici_CV_full.pdf" download><span class="icon download"></span> CV (full)</a>
+    </footer>
 
-    <span id="close" class="hidden">CLOSE</span>
-    <section id="full">
-        <iframe class="hidden" id="full-iframe" src="full.html" frameborder="0"></iframe>
-    </section>
+    <iframe class="hidden" id="full-iframe" src="full.html" frameborder="0"></iframe>
 
     <script>
+        function toggleModal() {
+            document.querySelector('#full-iframe').classList.toggle('hidden')
+            if(document.querySelector('#full-iframe').classList.contains('hidden'))
+                document.querySelector('#readmore').innerHTML = "MORE"
+            else
+                document.querySelector('#readmore').innerHTML = "LESS"
+        }
         document.querySelector('#readmore').addEventListener('click', function() {
-            document.querySelector('#full-iframe').classList.remove('hidden')
-            document.querySelector('#close').classList.remove('hidden')
+            toggleModal()
         });
-        document.querySelector('#close').addEventListener('click', function() {
-            document.querySelector('#full-iframe').classList.add('hidden')
-            document.querySelector('#close').classList.add('hidden')
-        });
+
+        if(window.location.href.split('#')[1] == 'full') {
+            toggleModal()
+        }
+
     </script>
 </body>
 
