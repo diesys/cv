@@ -51,15 +51,54 @@ ul.flex li {
     width: 100vw;
 }
 
-.container {
-    padding: 1em 3em 2em 3em;
+#left-side {
+    padding: 0 2em 2em 2em;
+    flex: 3;
 }
+
+#right-side {
+    padding: 4em 1.5em 2em 1.5em;
+    background: url('side.png') bottom center;
+    background-size: cover;
+    box-shadow: 5px 0 40px -5px #0007 inset;
+    color: #fff;
+    /* min-width: 200px; */
+    flex: 1;
+    font-size: .85em;
+    text-shadow: 1px 2px 6px #0006;
+}
+
+#right-side a,
+.separator a {
+    color: #fff;
+}
+
+#right-side h4 {
+    font-weight: 400;
+}
+
+#profilepic {
+    /* position: absolute; */
+    position: relative;
+    /* float: left; */
+    right: 100%;
+    top: 0;
+    transform: translate(30%, 0%);
+    box-shadow: 5px 10px 50px #0007;
+    border: 1px solid #fff2;
+    border-radius: 100%;
+}
+
+.container {
+    padding: 2em 1em;
+}
+
 #left-side .container:not(#header) {
-    min-width: 300px;
+    min-width: 200px;
     flex: 1;
 }
 #header {
-    width: 100% !important;
+    width: 85% !important;
 }
 #left-side h1, #left-side h2, #left-side h3 {
     text-align: center !important;
@@ -89,35 +128,7 @@ h1 {
 .txt-right {text-align: right;}
 .txt-justify {text-align: justify;}
 .txt-no-decor {text-decoration: none !important;}
-
-#left-side {
-    flex: 3;
-}
-#right-side {
-    padding-top: 2em;
-    background: url('side.png') bottom center;
-    background-size: cover;
-    color: #fff;
-    min-width: 300px;
-    flex: 1;
-    font-size: .85em;
-}
-
-#right-side a,
-.separator a {
-    color: #fff;
-}
-#right-side h4 {
-    font-weight: 400;
-}
-
-#profilepic {
-    position: absolute;
-    right: 250px;
-    box-shadow: 10px 10px 50px #0007;
-    border: 1px solid #fff2;
-    border-radius: 100%;
-}
+.txt-small {font-size: .8rem;}
 
 span.icon {
     width: 1.2em;
@@ -127,6 +138,11 @@ span.icon {
     display: inline-block;
     background-size: contain !important;
     background-repeat: no-repeat !important;
+}
+span.icon.small {
+    margin: 0 4px;
+    height: .8em;
+    width: .8em;
 }
 span.icon.webdev {background: url('code-slash.png');}
 span.icon.graphics {background: url('color-palette.png');}
@@ -164,4 +180,25 @@ ul.jobs li span.icon {
 }
 #readmore {
     cursor: pointer;
+}
+
+
+@media screen and (max-width: 660px) {
+    #left-side {
+        padding: 0 .5em 2em .5em;
+        flex: 2;
+    }
+    #left-side .container:not(#header) {
+        padding: 1em 2em;
+    }
+    #overview {
+        flex-wrap: wrap;
+    }
+    #profilepic {
+        right: 3em;
+    }
+    #right-side {
+        padding-bottom: 50vh;
+        font-size: .95rem;
+    }
 }
