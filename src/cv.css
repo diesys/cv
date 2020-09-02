@@ -42,16 +42,22 @@ ul.flex li {
 
 footer {
     height: 4em;
-    background: #333;
+    background-color: #333;
+    background: linear-gradient(#fff0, #cccf 70%);
+    /* text-shadow: 0 1px 3px #000a; */
     display: flex;
     align-items: center;
     justify-content: space-around;
-    color: #eee;
+    color: #222 !important;
     font-weight: 700;
     z-index: 300;
     position: fixed;
     bottom: 0;
+    padding-top: 2em;
     width: 100vw;
+}
+footer a, footer {
+    color: #222 !important;
 }
 footer span {
     width: 25%;
@@ -72,6 +78,7 @@ footer span {
     flex: 1;
     font-size: .85em;
     text-shadow: 1px 2px 6px #0006;
+    border-radius: 0 0 0 4em;
 }
 
 #right-side a,
@@ -178,7 +185,7 @@ ul.jobs li span.icon {
     position: fixed;
     margin: auto auto;
     transition: all 1s;
-    bottom: 3em;
+    bottom: 4em;
     left: 0;
     width: 100vw;
     height: calc(100vh - 3em);
@@ -192,7 +199,7 @@ ul.jobs li span.icon {
 @media screen and (max-width: 660px) {
     #left-side {
         padding: 0 .5em 2em .5em;
-        flex: 2;
+        flex: 1;
     }
     #left-side .container:not(#header) {
         padding: 1em 2em;
@@ -204,7 +211,9 @@ ul.jobs li span.icon {
         right: 3em;
     }
     #right-side {
+        flex: 1;
         padding-bottom: 50vh;
         font-size: .95rem;
+        border-radius: 0;
     }
 }
