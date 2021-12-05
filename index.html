@@ -368,21 +368,20 @@
     <!-- <iframe class="hidden" id="full-iframe" src="full.html" frameborder="0"></iframe> -->
 
     <script>
-        function toggleModal() {
-            document.querySelector('#full-iframe').classList.toggle('hidden')
-            if(document.querySelector('#full-iframe').classList.contains('hidden'))
-                document.querySelector('#readmore').innerHTML = "MORE"
-            else
-                document.querySelector('#readmore').innerHTML = "LESS"
-        }
-        document.querySelector('#readmore').addEventListener('click', function() {
-            toggleModal()
-        });
+        // function toggleModal() {
+        //     document.querySelector('#full-iframe').classList.toggle('hidden')
+        //     if(document.querySelector('#full-iframe').classList.contains('hidden'))
+        //         document.querySelector('#readmore').innerHTML = "MORE"
+        //     else
+        //         document.querySelector('#readmore').innerHTML = "LESS"
+        // }
+        // document.querySelector('#readmore').addEventListener('click', function() {
+        //     toggleModal()
+        // });
 
-        if(window.location.href.split('#')[1] == 'full') {
-            toggleModal()
-        }
-
+        // if(window.location.href.split('#')[1] == 'full') {
+        //     toggleModal()
+        // }
     </script>
 </body>
 
